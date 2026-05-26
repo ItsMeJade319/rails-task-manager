@@ -1,0 +1,21 @@
+<div class="container pt-5">
+<h1>My Tasks</h1>
+
+<ul class="list-unstyled mt-3">
+  <% @tasks.each do |task| %>
+  <div class="mb-2">
+    <li><% if task.completed == true%>
+      <i class="fa-regular fa-square-check"></i>
+      <% else %>
+      <i class="fa-regular fa-square"></i>
+      <% end %>
+      <%= link_to task.title, task_path(task), class: "link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" %> <%= link_to image_tag("trash_bin.svg", size: "20x20", alt: "destroy"),
+      task_path(task),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    </li>
+  </div>
+  <% end %>
+</ul>
+<hr>
+<i class="fa-solid fa-plus text-primary"></i> <%= link_to "Add a new Task", new_task_path, class: "link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" %>
+</div>

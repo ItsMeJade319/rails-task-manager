@@ -1,0 +1,16 @@
+<div class="container pt-5">
+  <h1>New Task</h1>
+
+  <form class="mt-3" action="/tasks" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="IEWV8sB5W64WYd0UKCAc4orx2g_MX9KXyDvYWz6jRaQhqSIxuaPtl2GyKVSKYYVdtlj5u_Aal7_QwYLXfh3V8A">
+    <div class="mb-3 col-6">
+      <label class="form-label" for="task_title">Title</label>
+      <input class="form-control" type="text" name="task[title]" id="task_title">
+    </div>
+    <div class="mb-3 col-6">
+      <label class="form-label" for="task_details">Details</label>
+      <input class="form-control" type="text" name="task[details]" id="task_details">
+    </div>
+    <hr class="col-6">
+     <input class="btn btn-primary" type="submit" name="commit" value="Create Task" data-disable-with="Create Task">
+  </form>
+</div>

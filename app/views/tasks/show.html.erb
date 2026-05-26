@@ -1,0 +1,16 @@
+<div class="container pt-3">
+  <div class="d-flex justify-content-between mb-3">
+    <h2><%= @task.title %></h2>
+    <div class="d-flex align-items-center">
+      <div>
+      <i class="fa-solid fa-pencil"></i>
+      <%= link_to "Edit Task", edit_task_path(@task), class: "link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"%>
+      </div>
+    </div>
+  </div>
+  <div  class="bg-warning-subtle p-3 d-flex align-items-center rounded-2">
+    <p class="m-0"><%= @task.details %></p>
+  </div>
+  <hr>
+  <i class="fa-solid fa-angle-left text-primary"></i> <%= link_to "Go to Tasks list", tasks_path, class: "link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"%>
+</div>
